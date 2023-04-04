@@ -1,17 +1,17 @@
 {
   "name": "@mash-up/mashong-say",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "mahsong say.",
   "main": "index.js",
   "bin": {
-    "mahsong": "src/cil.js"
+    "mahsong": "dist/cil.js"
   },
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
     "build": "tsc",
-    "publish:npm": "npm publish --access=public",
+    "publish:npm": "tsc && npm publish --access=public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
