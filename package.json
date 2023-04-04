@@ -1,6 +1,6 @@
 {
   "name": "@mash-up/mashong-say",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "mahsong say.",
   "main": "index.js",
   "bin": {
