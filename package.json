@@ -1,10 +1,10 @@
 {
   "name": "@mash-up/mashong-say",
   "version": "0.0.5",
-  "description": "mahsong say.",
+  "description": "mashong say.",
   "main": "index.js",
   "bin": {
-    "mahsong": "dist/cil.js"
+    "mashong": "dist/cil.js"
   },
   "publishConfig": {
     "access": "public"

@@ -6,7 +6,7 @@ export class BrandingMashongCommand extends AbstractCommand {
     program
       .command("branding-mashong [input]")
       .alias("bms")
-      .description("Generate Example Mahsong say.")
+      .description("Generate Example Mashong say.")
       .option("-f, --foo [foo]", "foo example", "default foo value")
       .action(async (input: string, command) => {
         const options = [];
