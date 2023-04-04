@@ -1,0 +1,35 @@
+{
+  "name": "mashong-say",
+  "version": "1.0.0",
+  "description": "mahsong say.",
+  "main": "index.js",
+  "bin": {
+    "mahsong": "src/cil.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mash-up-kr/mashong-say.git"
+  },
+  "keywords": [
+    "cowsay",
+    "mashongsay",
+    "mashong-say",
+    "mash-up"
+  ],
+  "author": "marades, seohyun0120, eunjungL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mash-up-kr/mashong-say/issues"
+  },
+  "homepage": "https://github.com/mash-up-kr/mashong-say#readme",
+  "dependencies": {
+    "commander": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11"
+  }
+}
