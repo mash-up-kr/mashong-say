@@ -12,6 +12,7 @@
   "scripts": {
     "build": "tsc",
     "publish:npm": "tsc && npm publish --access=public",
+    "publish:local": "tsc && npm i -g",
     "test": "jest"
   },
   "repository": {
