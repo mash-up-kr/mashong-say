@@ -3,6 +3,9 @@
 import { readFileSync } from "fs";
 import path from "path";
 
+export type IOption = {
+  [key: string]: string;
+};
 export abstract class AbstractAction {
   abstract mashongKey: string;
 

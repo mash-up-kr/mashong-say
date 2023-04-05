@@ -1,9 +1,9 @@
 import { Command } from "commander";
-import { BrandingMashongAction } from "../actions/branding-mashong.action";
-import { BrandingMashongCommand } from "./branding-mashong.command";
+import { MashongAction } from "../actions/mashong.action";
+import { MashongCommand } from "./mashong.command";
 export class CommandLoader {
   public static async load(program: Command): Promise<void> {
-    new BrandingMashongCommand(new BrandingMashongAction()).load(program);
+    new MashongCommand(new MashongAction()).load(program);
 
     this.handleInvalidCommand(program);
   }
