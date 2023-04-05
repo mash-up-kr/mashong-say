@@ -15,5 +15,5 @@ export abstract class AbstractAction {
     return mashong;
   }
 
-  public abstract handle(...args: any[]): Promise<void>;
+  public abstract handle(...args: any[]): string;
 }

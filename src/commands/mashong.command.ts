@@ -15,8 +15,8 @@ export class MashongCommand extends AbstractCommand {
       )
       .option("-b, --bubble-type [bubbleType]", "select speech bubble type")
       .action(async (input: string, command: IOption) => {
-        console.log(command);
-        await this.action.handle(input, command);
+        const output = this.action.handle(input, command);
+        console.log(output);
       });
   }
 }
