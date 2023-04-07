@@ -1,0 +1,43 @@
+{
+  "name": "@mash-up/mashong-say",
+  "version": "0.0.6",
+  "description": "mashong say.",
+  "main": "index.js",
+  "bin": {
+    "mashong": "dist/cli.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "publish:npm": "tsc && npm publish --access=public",
+    "publish:local": "tsc && npm i -g",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mash-up-kr/mashong-say.git"
+  },
+  "keywords": [
+    "cowsay",
+    "mashongsay",
+    "mashong-say",
+    "mash-up"
+  ],
+  "author": "marades, seohyun0120, eunjungL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mash-up-kr/mashong-say/issues"
+  },
+  "homepage": "https://github.com/mash-up-kr/mashong-say#readme",
+  "dependencies": {
+    "commander": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.11",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0"
+  }
+}
