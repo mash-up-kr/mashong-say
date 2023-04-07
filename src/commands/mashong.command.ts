@@ -10,7 +10,7 @@ export class MashongCommand extends AbstractCommand {
       .description("Generate Example Mashong say.")
       .option(
         "-p, --platform [platform]",
-        "select mahsong platform",
+        "select mashong platform",
         "branding"
       )
       .option("-b, --bubble-type [bubbleType]", "select speech bubble type")

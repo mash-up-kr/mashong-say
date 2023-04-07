@@ -8,7 +8,7 @@ export class CommandLoader {
     this.handleInvalidCommand(program);
   }
 
-  private static handleInvalidCommand(program: Command) {
+  private static handleInvalidCommand(program: Command): void {
     program.on("command:*", () => {
       console.error(`\nERROR Invalid command: ${program.args.join(" ")}`);
       console.log(`See --help for a list of available commands.\n`);
