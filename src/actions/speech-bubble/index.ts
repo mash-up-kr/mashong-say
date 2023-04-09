@@ -17,3 +17,15 @@ export class SpeechBubble {
     return input;
   }
 }
+
+function getStringLength(text: string): number {
+  let length = 0;
+  for (let i = 0; i < text.length; i++) {
+    if (/[ㄱ-ㅎㅏ-ㅣ가-힣]/.test(text[i])) {
+      length += 2;
+    } else {
+      length += 1;
+    }
+  }
+  return length;
+}
