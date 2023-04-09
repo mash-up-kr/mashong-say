@@ -2,16 +2,19 @@ import { IOption } from "../abstract.action";
 
 export class SpeechBubble {
   static create(input: string, option: IOption) {
-    const bubbleType = option.bubbleType;
+    const bubbleType = option.bubbleType ?? 'pipe';
     const bubbleTypeDic: { [key: string]: string[] } = {
       slash: ["/", "/"],
       hash: ["#", "#"],
       plus: ["+", "+"],
+      bracket: ["<", ">"],
+      pipe: ["|", "|"],
+      dollar: ["$", "$"]
     };
 
     const bubble = bubbleTypeDic[bubbleType];
-    if (bubble) {
-      return [bubble[0], input, bubble[1]].join(" ");
+    return format(input, bubble);
+  }
     }
 
     return input;
