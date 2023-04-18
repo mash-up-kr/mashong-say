@@ -13,8 +13,8 @@ export class MashongCommand extends AbstractCommand {
         "select mashong platform",
         // "branding"
       )
-      .option("-b, --bubble-type [bubbleType]", "select speech bubble type")
         .option("-e, --eye [eyeType]", "select eye type", "default")
+      .option("-b, --bubble-type [bubbleType]", "select speech bubble type", "pipe")
       .action(async (input: string, command: IOption) => {
         const output = this.action.handle(input, command);
         console.log(output);
