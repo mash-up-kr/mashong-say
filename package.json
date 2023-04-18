@@ -1,8 +1,8 @@
 {
   "name": "@mash-up/mashong-say",
-  "version": "0.0.8",
+  "version": "0.1.2",
   "description": "mashong say.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "bin": {
     "mashong": "dist/cli.js"
   },
