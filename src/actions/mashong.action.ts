@@ -1,5 +1,6 @@
 import { AbstractAction, IOption } from "./abstract.action";
 import { SpeechBubble } from "./speech-bubble";
+import { Eye } from "./eye";
 
 export class MashongAction extends AbstractAction {
   mashongKey = "mashong";
@@ -11,8 +12,9 @@ export class MashongAction extends AbstractAction {
 
     const mashong = this.getMashong(key);
     const speech = SpeechBubble.create(input, option);
+    const eye = Eye.create(option);
 
-    const output = mashong.replace("$speech", speech);
+    const output = mashong.replace("$speech", speech).replace(/e/gi, eye);
     return output;
   }
 }
