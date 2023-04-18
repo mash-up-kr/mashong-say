@@ -25,7 +25,12 @@ jobs:
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org/
-      - run: npm version patch
+      - run: |
+          COMMIT_AUTHOR=$(git log -1 --pretty=format:"%an")
+          COMMIT_AUTHOR_EMAIL=$(git log -1 --pretty=format:"%ae")
+          git config --global user.name $COMMIT_AUTHOR
+          git config --global user.email $COMMIT_AUTHOR_EMAIL
+          npm version patch
       - run: npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
