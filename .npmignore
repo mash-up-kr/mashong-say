@@ -15,3 +15,7 @@ node_modules/
 # definitions
 !**/*.d.ts
 !*.d.ts
+
+*.config.js
+*config.json
+.github/
