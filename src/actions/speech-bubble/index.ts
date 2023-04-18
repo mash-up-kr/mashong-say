@@ -17,7 +17,7 @@ export class SpeechBubble {
   }
 }
 
-function format(text: string, btype: string[]): string {
+function format(text: string, bubbleType: string[]): string {
   const lines = text.split(/\r?\n/);
 
   const maxLength = Math.max(...lines.map(line => getStringLength(line)));
@@ -33,7 +33,7 @@ function format(text: string, btype: string[]): string {
   const bubble = [updown];
 
   for (let i = 0; i < center.length; i++) {
-    bubble.push(`${btype[0]} ${center[i]} ${btype[1]}`);
+    bubble.push(`${bubbleType[0]} ${center[i]} ${bubbleType[1]}`);
   }
   bubble.push(updown);
 
