@@ -4,12 +4,11 @@ describe("매숑 테스트", () => {
   it("브랜딩 메숑 성공 테스트", () => {
     const output = mashong("hi", { platform: "branding" });
     expect(output).toMatchInlineSnapshot(`
-"
-                                                           
-                                                           
-                                                           
-         hi
-                                                       
+" ---- 
+| hi |
+ ---- 
+        \\
+         \\                               
           (%%%%#                              /%#%#        
          #%@@@@@@#%                        #%%@@@@@%%      
          %%@@@@@@@@#%%%%,            %%%%%%@@@@@@@@%#      
@@ -28,8 +27,7 @@ describe("매숑 테스트", () => {
                                                            
                                                            
                                                            
-                                                           
-                                                           "
+                                                                                        "
 `);
   });
 });
