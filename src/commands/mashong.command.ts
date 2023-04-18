@@ -11,7 +11,7 @@ export class MashongCommand extends AbstractCommand {
       .option(
         "-p, --platform [platform]",
         "select mashong platform",
-        "branding"
+        // "branding"
       )
       .option("-b, --bubble-type [bubbleType]", "select speech bubble type")
       .action(async (input: string, command: IOption) => {
