@@ -9,6 +9,6 @@ export class Eye {
             default: " "
         }
 
-        return eyeTypeDic[eyeType];
+        return eyeTypeDic[eyeType] ?? eyeTypeDic['default'];
     }
 }
