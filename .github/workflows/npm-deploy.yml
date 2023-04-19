@@ -14,8 +14,14 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: npm ci
-      - run: npm run build
+      - run: |
+          npm ci
+          npm run build
+          COMMIT_AUTHOR=$(git log -1 --pretty=format:"%an")
+          COMMIT_AUTHOR_EMAIL=$(git log -1 --pretty=format:"%ae")
+          git config --global user.name $COMMIT_AUTHOR
+          git config --global user.email $COMMIT_AUTHOR_EMAIL
+          npm version patch
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_AUTH_TOKEN }}
