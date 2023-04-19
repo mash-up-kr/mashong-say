@@ -4,10 +4,9 @@ on:
   push:
     branches:
       - main
-      - publish
 
 jobs:
-  update-version:
+  update-publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -23,15 +22,12 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           tags: true
-  publish-npm:
-    needs: update-version
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
+          branch: ${{ github.ref }}
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: |
+      - name: Npm Publish
+        run: |
           npm ci
           npm run build
       - uses: JS-DevTools/npm-publish@v1
